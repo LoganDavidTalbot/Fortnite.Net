@@ -28,6 +28,12 @@ namespace Fortnite.Net.Resources
 
         public LifeTimeStats LifeTimeStats { get; set; }
 
+        [DataMember(Name = "recentMatches")]
+        public Match[] RecentMatches { get; set; }
+
+        [DataMember(Name = "stats")]
+        public Stats Stats { get; set; }
+
         public Profile()
         {
             init();
