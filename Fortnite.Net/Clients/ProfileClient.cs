@@ -1,13 +1,13 @@
 ﻿using Fortnite.Net.Resources;
 using Newtonsoft.Json;
-using Rest;
-using RestSharp;
 using System;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using Fortnite.Net.Extensions;
+using System.Linq;
+using System.Net.Http.Headers;
 
 namespace Fortnite.Net.Clients
 {
@@ -38,7 +38,8 @@ namespace Fortnite.Net.Clients
             _client.DefaultRequestHeaders.Add("TRN-Api-Key", _key);
 
             HttpResponseMessage res = await _client.GetAsync($"{_path}/{platform}/{name}");
-            if (res.IsSuccessStatusCode)
+
+            if (res.IsSuccessStatusCode && res.Content.Headers.ContentType.MediaType.Contains("application/json"))
             {
                 player = res.ContentAsType<Profile>();
             }

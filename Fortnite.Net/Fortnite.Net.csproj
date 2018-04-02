@@ -2,12 +2,29 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <RepositoryType>Git</RepositoryType>
+    <Authors>Logan Talbot (https://www.logantalbot.com/)</Authors>
+    <PackageIconUrl>https://d1u5p3l4wpay3k.cloudfront.net/fortnite_gamepedia/6/64/Favicon.ico</PackageIconUrl>
+    <PackageTags>Fortnite, Fornite Client</PackageTags>
+    <Copyright>Logan Talbot (https://www.logantalbot.com/)</Copyright>
+    <RepositoryUrl>https://github.com/LoganDavidTalbot/Fortnite.Net</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/LoganDavidTalbot/Fortnite.Net</PackageProjectUrl>
+    <PackageLicenseUrl>https://github.com/LoganDavidTalbot/Fortnite.Net</PackageLicenseUrl>
+    <Description>Unofficial Fortnite Rest Client for the Fortnite Tracker API supporting .NET Core and Framework platforms.</Description>
+    <Company>https://www.logantalbot.com/</Company>
+    <NeutralLanguage>en-GB</NeutralLanguage>
+    <Version>1.1.0</Version>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile></DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="RestClient" Version="2.3.15.9" />
-    <PackageReference Include="RestSharp" Version="106.2.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
     <PackageReference Include="System.Net.Http" Version="4.3.3" />
+    <PackageReference Include="System.Runtime.Serialization.Json" Version="4.3.0" />
   </ItemGroup>
 
 </Project>
